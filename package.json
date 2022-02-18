@@ -1,0 +1,20 @@
+{
+  "name": "kv-ui-common",
+  "version": "1.0.0",
+  "description": "Monorepo of shared code for frontend Kiva marketplace apps",
+  "workspaces": [
+  ],
+  "scripts": {
+    "test": "npm run test --workspaces"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiva/kv-ui-common.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/kiva/kv-ui-common/issues"
+  },
+  "homepage": "https://github.com/kiva/kv-ui-common#readme"
+}
