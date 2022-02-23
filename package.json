@@ -2,7 +2,9 @@
   "name": "kv-ui-common",
   "version": "1.0.0",
   "description": "Monorepo of shared code for frontend Kiva marketplace apps",
-  "workspaces": [],
+  "workspaces": [
+    "@kiva/kv-analytics"
+  ],
   "scripts": {
     "test": "npm run test --workspaces",
     "prepare": "husky install",
