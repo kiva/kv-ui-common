@@ -1,5 +1,6 @@
 import logFormatter from '../../util/logFormatter';
 import SimpleQueue from '../../util/simpleQueue';
+import headScript from './scripts.js';
 
 // install method for plugin
 export default {
@@ -10,6 +11,22 @@ export default {
 		let gaAltLoaded;
 		let fbLoaded;
 		const queue = new SimpleQueue();
+
+		Vue.mixin({
+			mounted() {
+				let s = document.createElement('script');
+				s.type = 'text/javascript';
+				let code = serialize(headScript);
+				try {
+					s.appendChild(document.createTextNode(code));
+					document.body.appendChild(s);
+				} catch (e) {
+					s.text = code;
+					document.body.appendChild(s);
+				}
+			}
+		});
+
 
 		const kvActions = {
 			checkLibs: () => {
